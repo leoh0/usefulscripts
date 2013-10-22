@@ -703,7 +703,7 @@ else
 		emailsubject=`cat $emailsubject_tmp_file`
 		emailsubject="$emailprefix$projectdesc: $emailsubject"
         # Note: change the smtp server to yours
-		cat $email_tmp_file | mailx -S smtp="smtp://smtp.cse.ust.hk" -s "$emailsubject" -r $senderemail $recipients 
+		cat $email_tmp_file | mailx -S smtp="smtp://smtp.gmail.com:587" -s "$emailsubject" -r $senderemail $recipients 
 
 		rm -f $emailsubject_tmp_file $email_tmp_file
 	done
